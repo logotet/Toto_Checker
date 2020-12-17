@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_add_numbers"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Въведете и запазете комбинацията"/>
+
+        <include
+            android:layout_margin="16dp"
+            android:id="@+id/edt_user_input"
+            layout="@layout/ball_input_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/layout_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:layout_margin="8dp"
+                android:id="@+id/btn_49"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_category"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_6_49"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_margin="8dp"
+                android:id="@+id/btn_35"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_5_35"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_margin="8dp"
+                android:id="@+id/btn_42"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_6_42"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:layout_margin="8dp"
+                android:id="@+id/btn_cancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_margin="8dp"
+                android:id="@+id/btn_ok"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="OK"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

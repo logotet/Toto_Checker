@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/fragment_my_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MyNumbersFragment">
+
+        <TextView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/txt_no_data_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="Добавете тук любимите си числа"
+            android:textSize="36sp"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Провери всички"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/btn_check_all"/>
+
+        <TextView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/txt_category_49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_6_49"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/rec_view_category_my_49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/txt_category_35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_5_35"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/rec_view_category_my_35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/txt_category_42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_6_42"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/rec_view_category_my_42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</layout>

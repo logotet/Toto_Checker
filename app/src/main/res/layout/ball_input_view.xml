@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_ball_one"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_one"
+                android:layout_alignTop="@+id/img_ball_one"
+                android:layout_alignRight="@+id/img_ball_one"
+                android:layout_alignBottom="@+id/img_ball_one"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_ball_two"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_two"
+                android:layout_alignTop="@+id/img_ball_two"
+                android:layout_alignRight="@+id/img_ball_two"
+                android:layout_alignBottom="@+id/img_ball_two"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_ball_three"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_three"
+                android:layout_alignTop="@+id/img_ball_three"
+                android:layout_alignRight="@+id/img_ball_three"
+                android:layout_alignBottom="@+id/img_ball_three"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_ball_four"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_four"
+                android:layout_alignTop="@+id/img_ball_four"
+                android:layout_alignRight="@+id/img_ball_four"
+                android:layout_alignBottom="@+id/img_ball_four"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_ball_five"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_five"
+                android:layout_alignTop="@+id/img_ball_five"
+                android:layout_alignRight="@+id/img_ball_five"
+                android:layout_alignBottom="@+id/img_ball_five"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edt_sixth_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_ball_six"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ball_white" />
+
+            <EditText
+                android:id="@+id/edt_ball_value_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_ball_six"
+                android:layout_alignTop="@+id/img_ball_six"
+                android:layout_alignRight="@+id/img_ball_six"
+                android:layout_alignBottom="@+id/img_ball_six"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>
