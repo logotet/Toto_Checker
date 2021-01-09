@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +31,7 @@ import com.logotet.totochecker.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 
 public class MyNumbersFragment extends Fragment implements CategoryAdapter.CategoryHolder.OnItemsClickListener,
@@ -60,12 +62,11 @@ public class MyNumbersFragment extends Fragment implements CategoryAdapter.Categ
         viewModel = new ViewModelProvider(requireActivity()).get(MyNumbersFragmentViewModel.class);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(Constants.TITLE_MY_NUMBERS);
 
-        binding.btnCheckAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checkWinningNumbers();
-            }
-        });
+//    DUMMY SHIT RELATED TO LIVE DATA
+
+        viewModel.getCurrentName().observe(getViewLifecycleOwner(), s -> Toast.makeText(getContext(), s, Toast.LENGTH_LONG).show());
+
+        binding.btnCheckAll.setOnClickListener(view1 -> checkWinningNumbers());
 
         //TODO refactor the following lines into one method
         viewModel.getAllDataFromCategory(Constants.SIX49,

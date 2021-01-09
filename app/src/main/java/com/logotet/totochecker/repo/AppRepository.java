@@ -36,14 +36,12 @@ public class AppRepository extends Application {
         numberLoader = NumberLoader.getInstance();
     }
 
-    //    for testing purposes the init method uses context here
     public void initDb(Context context) {
         db = NumbersDatabase.getInstance(context);
     }
 
 
-//    Get data from scraping the website
-
+    //    Get data from scraping the website
     public List<String> getNumbers49() {
         return numberLoader.getWin49();
     }
@@ -61,7 +59,7 @@ public class AppRepository extends Application {
     }
 
 
-//    Manipulate data from the local database
+//    Get data from the local database
 
     public void insertNumbersToDb(NumbersEntity entity) {
         executor = Executors.newSingleThreadExecutor();

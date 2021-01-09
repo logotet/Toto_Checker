@@ -11,6 +11,7 @@ import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.logotet.totochecker.adapters.RecyclerViewInitializer;
@@ -41,15 +42,25 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
-        winningNumbers49 = viewModel.getWinningNumbers49();
-        RecyclerViewInitializer.initBallRecView(binding.recView49, winningNumbers49);
-        winningNumbersFirst35 = viewModel.getWinningNumbersFirst35();
-        RecyclerViewInitializer.initBallRecView(binding.recViewFirst35, winningNumbersFirst35);
-        winningNumbersSecond35 = viewModel.getWinningNumbersSecond35();
-        RecyclerViewInitializer.initBallRecView(binding.recViewSecond35, winningNumbersSecond35);
-        winningNumbers42 = viewModel.getWinningNumbers42();
-        RecyclerViewInitializer.initBallRecView(binding.recView42, winningNumbers42);
+        viewModel.getWinningNumbers49().observe(this, strings -> {
+            RecyclerViewInitializer.initBallRecView(binding.recView49, strings);
+            winningNumbers49 = strings;
+        });
 
+        viewModel.getWinningNumbersFirst35().observe(this, strings -> {
+            RecyclerViewInitializer.initBallRecView(binding.recViewFirst35, strings);
+            winningNumbersFirst35 = strings;
+        });
+
+        viewModel.getWinningNumbersSec35().observe(this, strings -> {
+            RecyclerViewInitializer.initBallRecView(binding.recViewSecond35, strings);
+            winningNumbersSecond35 = strings;
+        });
+
+        viewModel.getWinningNumbers49().observe(this, strings -> {
+            RecyclerViewInitializer.initBallRecView(binding.recView42, strings);
+            winningNumbers42 = strings;
+        });
 
         goToFragWithRecView(binding.recView49);
         goToFragWithRecView(binding.recViewFirst35);

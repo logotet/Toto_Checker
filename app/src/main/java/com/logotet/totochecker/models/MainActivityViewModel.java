@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.SparseArray;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.google.android.gms.vision.Frame;
@@ -21,11 +22,15 @@ public class MainActivityViewModel extends ViewModel {
     private List<String> userNumbers = new ArrayList<>();
     private String convertedText;
 
+//    LiveData
+    private MutableLiveData<List<String>> winningNumbers49;
+    private MutableLiveData<List<String>> winningNumbersFirst35;
+    private MutableLiveData<List<String>> winningNumbersSec35;
+    private MutableLiveData<List<String>> winningNumbers42;
+
     public MainActivityViewModel() {
         appRepository = AppRepository.getInstance();
     }
-
-
 
     public void detectText(Context context, Bitmap bitmap) {
         TextRecognizer textRecognizer = new TextRecognizer.Builder(context).build();
@@ -74,21 +79,66 @@ public class MainActivityViewModel extends ViewModel {
         return matchingNumbers;
     }
 
-    public List<String> getWinningNumbersFirst35() {
-        return appRepository.getNumbersFirst35();
+//    public List<String> getWinningNumbersFirst35() {
+//        return appRepository.getNumbersFirst35();
+//    }
+
+//    LiveData
+
+    public MutableLiveData<List<String>> getWinningNumbers49(){
+        if(winningNumbers49 == null){
+            winningNumbers49 = new MutableLiveData<>();
+            winningNumbers49.postValue(appRepository.getNumbers49());
+        }
+        return winningNumbers49;
     }
 
-    public List<String> getWinningNumbersSecond35() {
-        return appRepository.getNumbersSecond35();
+    public MutableLiveData<List<String>> getWinningNumbers35() {
+        if(winningNumbersFirst35 == null){
+            winningNumbersFirst35 = new MutableLiveData<>();
+            winningNumbersFirst35.postValue(appRepository.getNumbersFirst35());
+        }
+        return winningNumbersFirst35;
     }
 
-    public List<String> getWinningNumbers42() {
-        return appRepository.getNumbers42();
+    public MutableLiveData<List<String>> getWinningNumbersFirst35() {
+        if(winningNumbersFirst35 == null){
+            winningNumbersFirst35 = new MutableLiveData<>();
+            winningNumbersFirst35.postValue(appRepository.getNumbersFirst35());
+        }
+        return winningNumbersFirst35;
     }
 
-    public List<String> getWinningNumbers49() {
-        return appRepository.getNumbers49();
+    public MutableLiveData<List<String>> getWinningNumbersSec35() {
+        if (winningNumbersSec35 == null) {
+            winningNumbersSec35 = new MutableLiveData<>();
+            winningNumbersSec35.postValue(appRepository.getNumbersSecond35());
+        }
+        return winningNumbersSec35;
     }
+
+    public MutableLiveData<List<String>> getWinningNumbers42() {
+        if(winningNumbers42 == null){
+            winningNumbers42 = new MutableLiveData<>();
+            winningNumbers42.postValue(appRepository.getNumbers42());
+        }
+        return winningNumbers42;
+    }
+
+
+
+
+    //    public List<String> getWinningNumbersSecond35() {
+//        return appRepository.getNumbersSecond35();
+//    }
+
+//    public List<String> getWinningNumbers42() {
+//        return appRepository.getNumbers42();
+//    }
+
+//    public List<String> getWinningNumbers49() {
+//        return appRepository.getNumbers49();
+//    }
 
 
 

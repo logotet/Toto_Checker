@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.MutableLiveData;
 
 import com.logotet.totochecker.data.local.NumbersEntity;
 import com.logotet.totochecker.repo.AppRepository;
@@ -17,11 +18,28 @@ public class MyNumbersFragmentViewModel extends AndroidViewModel {
     private AppRepository appRepository;
     private List<String> matchingNumbers = new ArrayList<>();
     private List<String> userNumbers = new ArrayList<>();
+    private MutableLiveData<List<String>> matchingNumbersLive;
+
+    //    DUMMY SHIT RELATED TO LIVE DATA
+    private MutableLiveData<String> currentName;
+
+
+
 
     public MyNumbersFragmentViewModel(@NonNull Application application) {
         super(application);
         appRepository = new AppRepository();
         appRepository.initDb(getApplication().getApplicationContext());
+    }
+
+
+//    DUMMY SHIT RELATED TO LIVE DATA
+    public MutableLiveData<String> getCurrentName() {
+        if (currentName == null) {
+            currentName = new MutableLiveData<String>();
+            currentName.postValue(appRepository.getNumbers42().get(0));
+        }
+        return currentName;
     }
 
     public void getAllData(DataListener listener) {
@@ -51,6 +69,11 @@ public class MyNumbersFragmentViewModel extends AndroidViewModel {
     }
 
     //TODO make a method that checks every number from the database and sets the matching ones
+
+//    public void checkByCategory(NumbersEntity entity){
+//        setMatchingNumbers(appRepository.getNumbers49(), entity.getValues());
+//
+//    }
     public void setMatchingNumbers(List<String> winNumbs, List<String> userNumbs) {
         matchingNumbers.clear();
         for (int i = 0; i < userNumbs.size(); i++) {

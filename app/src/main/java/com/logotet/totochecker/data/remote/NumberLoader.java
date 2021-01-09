@@ -70,9 +70,5 @@ public class NumberLoader {
         return win42;
     }
 
-//    @Override
-//    public void onElementsRecieved(Elements elements) {
-//
-//    }
 }
 
