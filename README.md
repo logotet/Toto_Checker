@@ -8,5 +8,4 @@ number of the lottery ticket and convert it to text;
 Used technologies: Java, jsoup, Room, MVVM, Live Data, Google Vision
 
 ![unnamed (5)](https://user-images.githubusercontent.com/23497123/108984765-f73cde00-7698-11eb-8c15-d83d7389fea4.jpg)
-![unnamed (6)](https://user-images.githubusercontent.com/23497123/108984769-f7d57480-7698-11eb-9380-5ef1f233c25b.jpg)
 ![unnamed (7)](https://user-images.githubusercontent.com/23497123/108984771-f7d57480-7698-11eb-8a5e-f8d8b1e4bf42.jpg)
